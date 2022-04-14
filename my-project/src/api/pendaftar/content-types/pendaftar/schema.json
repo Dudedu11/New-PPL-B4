@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pendaftars",
+  "info": {
+    "singularName": "pendaftar",
+    "pluralName": "pendaftars",
+    "displayName": "pendaftar",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "employee": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee.employee"
+    }
+  }
+}

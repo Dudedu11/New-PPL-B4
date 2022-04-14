@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jabatans",
+  "info": {
+    "singularName": "jabatan",
+    "pluralName": "jabatans",
+    "displayName": "jabatan"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_jabatan": {
+      "required": true,
+      "unique": true,
+      "type": "integer"
+    },
+    "nama_jabatan": {
+      "type": "string",
+      "required": true
+    },
+    "employees": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::employee.employee",
+      "mappedBy": "jabatan"
+    }
+  }
+}

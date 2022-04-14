@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pendidikans",
+  "info": {
+    "singularName": "pendidikan",
+    "pluralName": "pendidikans",
+    "displayName": "pendidikan"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_pendidikan": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "nama_pendidikan": {
+      "type": "string",
+      "required": true
+    },
+    "employees": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::employee.employee",
+      "mappedBy": "pendidikan"
+    }
+  }
+}

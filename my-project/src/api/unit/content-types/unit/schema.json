@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "units",
+  "info": {
+    "singularName": "unit",
+    "pluralName": "units",
+    "displayName": "unit",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_unit": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "nama_unit": {
+      "type": "string",
+      "required": true
+    },
+    "direktorats": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::direktorat.direktorat",
+      "mappedBy": "units"
+    },
+    "employees": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::employee.employee",
+      "mappedBy": "unit"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employees",
+  "info": {
+    "singularName": "employee",
+    "pluralName": "employees",
+    "displayName": "employee",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nip": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "nama": {
+      "type": "string",
+      "required": true
+    },
+    "tempat_lahir": {
+      "type": "string",
+      "required": true
+    },
+    "no_hp": {
+      "type": "string",
+      "required": true
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "male",
+        "female"
+      ],
+      "required": true
+    },
+    "religion": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "tgl_lahir": {
+      "type": "date",
+      "required": true
+    },
+    "bidang": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::bidang.bidang",
+      "inversedBy": "employees"
+    },
+    "direktorat": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::direktorat.direktorat",
+      "inversedBy": "employees"
+    },
+    "divisi": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::divisi.divisi",
+      "inversedBy": "employees"
+    },
+    "grade": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::grade.grade",
+      "inversedBy": "employees"
+    },
+    "jabatan": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::jabatan.jabatan",
+      "inversedBy": "employees"
+    },
+    "jenjang": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::jenjang.jenjang",
+      "inversedBy": "employees"
+    },
+    "pendidikan": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pendidikan.pendidikan",
+      "inversedBy": "employees"
+    },
+    "sub_bidang": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sub-bidang.sub-bidang",
+      "inversedBy": "employees"
+    },
+    "unit": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::unit.unit",
+      "inversedBy": "employees"
+    },
+    "penguji": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::penguji.penguji",
+      "inversedBy": "employees"
+    }
+  }
+}

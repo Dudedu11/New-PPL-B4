@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sub_bidangs",
+  "info": {
+    "singularName": "sub-bidang",
+    "pluralName": "sub-bidangs",
+    "displayName": "sub_bidang",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_sub_bidang": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "nama_sub_bidang": {
+      "type": "string",
+      "required": true
+    },
+    "employees": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::employee.employee",
+      "mappedBy": "sub_bidang"
+    },
+    "bidang": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::bidang.bidang",
+      "inversedBy": "sub_bidangs"
+    }
+  }
+}

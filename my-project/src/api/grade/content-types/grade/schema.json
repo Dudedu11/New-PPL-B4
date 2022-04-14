@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "grades",
+  "info": {
+    "singularName": "grade",
+    "pluralName": "grades",
+    "displayName": "grade"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_grade": {
+      "unique": true,
+      "required": true,
+      "type": "integer"
+    },
+    "nama_grade": {
+      "type": "string",
+      "required": true
+    },
+    "employees": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::employee.employee",
+      "mappedBy": "grade"
+    }
+  }
+}

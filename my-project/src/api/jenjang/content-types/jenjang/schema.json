@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jenjangs",
+  "info": {
+    "singularName": "jenjang",
+    "pluralName": "jenjangs",
+    "displayName": "jenjang"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_jenjang": {
+      "required": true,
+      "unique": true,
+      "type": "integer"
+    },
+    "nama_jenjang": {
+      "type": "string",
+      "required": true
+    },
+    "employees": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::employee.employee",
+      "mappedBy": "jenjang"
+    }
+  }
+}
