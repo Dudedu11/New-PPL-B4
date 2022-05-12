@@ -106,6 +106,12 @@
       "relation": "manyToOne",
       "target": "api::penguji.penguji",
       "inversedBy": "employees"
+    },
+    "nilai": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::nilai.nilai",
+      "mappedBy": "employee"
     }
   }
 }
