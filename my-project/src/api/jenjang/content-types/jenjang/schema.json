@@ -12,18 +12,24 @@
   "pluginOptions": {},
   "attributes": {
     "id_jenjang": {
+      "type": "integer",
       "required": true,
-      "unique": true,
-      "type": "integer"
+      "unique": true
     },
     "nama_jenjang": {
       "type": "string",
       "required": true
     },
-    "employees": {
+    "jabatans": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::employee.employee",
+      "target": "api::jabatan.jabatan",
+      "mappedBy": "jenjang"
+    },
+    "grades": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::grade.grade",
       "mappedBy": "jenjang"
     }
   }

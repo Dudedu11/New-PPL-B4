@@ -4,8 +4,7 @@
   "info": {
     "singularName": "bidang",
     "pluralName": "bidangs",
-    "displayName": "bidang",
-    "description": ""
+    "displayName": "bidang"
   },
   "options": {
     "draftAndPublish": true
@@ -20,12 +19,6 @@
     "nama_bidang": {
       "type": "string",
       "required": true
-    },
-    "employees": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::employee.employee",
-      "mappedBy": "bidang"
     },
     "divisi": {
       "type": "relation",

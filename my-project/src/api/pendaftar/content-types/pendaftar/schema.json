@@ -12,10 +12,48 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "employee": {
+    "tanggal_daftar": {
+      "type": "date",
+      "required": true
+    },
+    "proyeksi": {
+      "type": "string",
+      "required": true
+    },
+    "jenis_fnp": {
+      "type": "string",
+      "required": true
+    },
+    "file_ppt": {
+      "type": "string",
+      "required": true
+    },
+    "file_cv": {
+      "type": "string",
+      "required": true
+    },
+    "id_pendaftaran": {
+      "type": "integer",
+      "unique": true,
+      "required": true
+    },
+    "key_factor_fnp": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::employee.employee"
+      "target": "api::key-factor-fnp.key-factor-fnp",
+      "inversedBy": "pendaftar"
+    },
+    "data_pegawai": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::data-pegawai.data-pegawai",
+      "inversedBy": "pendaftars"
+    },
+    "pengujis": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::penguji.penguji",
+      "mappedBy": "pendaftar"
     }
   }
 }

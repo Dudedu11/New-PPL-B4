@@ -12,19 +12,25 @@
   "pluginOptions": {},
   "attributes": {
     "id_jabatan": {
+      "type": "integer",
       "required": true,
-      "unique": true,
-      "type": "integer"
+      "unique": true
     },
     "nama_jabatan": {
       "type": "string",
       "required": true
     },
-    "employees": {
+    "data_pegawai": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::employee.employee",
-      "mappedBy": "jabatan"
+      "relation": "manyToOne",
+      "target": "api::data-pegawai.data-pegawai",
+      "inversedBy": "jabatans"
+    },
+    "jenjang": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::jenjang.jenjang",
+      "inversedBy": "jabatans"
     }
   }
 }

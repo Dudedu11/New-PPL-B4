@@ -12,20 +12,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "id_sub_bidang": {
+    "id_sub": {
       "type": "integer",
-      "required": true,
-      "unique": true
-    },
-    "nama_sub_bidang": {
-      "type": "string",
+      "unique": true,
       "required": true
     },
-    "employees": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::employee.employee",
-      "mappedBy": "sub_bidang"
+    "nama_sub": {
+      "type": "string",
+      "required": true
     },
     "bidang": {
       "type": "relation",

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "pendidikan",
     "pluralName": "pendidikans",
-    "displayName": "pendidikan"
+    "displayName": "pendidikan",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,18 +14,19 @@
   "attributes": {
     "id_pendidikan": {
       "type": "integer",
-      "required": true,
-      "unique": true
+      "unique": true,
+      "required": true
     },
     "nama_pendidikan": {
       "type": "string",
+      "unique": true,
       "required": true
     },
-    "employees": {
+    "data_pegawai": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::employee.employee",
-      "mappedBy": "pendidikan"
+      "relation": "manyToOne",
+      "target": "api::data-pegawai.data-pegawai",
+      "inversedBy": "pendidikans"
     }
   }
 }

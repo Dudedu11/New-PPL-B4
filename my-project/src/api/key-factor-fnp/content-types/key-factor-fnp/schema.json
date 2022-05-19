@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "key_factor_fnps",
+  "info": {
+    "singularName": "key-factor-fnp",
+    "pluralName": "key-factor-fnps",
+    "displayName": "key_factor_fnp",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_key_factor": {
+      "required": true,
+      "unique": true,
+      "type": "integer"
+    },
+    "nama_key_factor": {
+      "type": "string",
+      "required": true
+    },
+    "bobot": {
+      "type": "integer",
+      "required": true
+    },
+    "aspek_komponen_fnps": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::aspek-komponen-fnp.aspek-komponen-fnp",
+      "mappedBy": "key_factor_fnp"
+    },
+    "pendaftar": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pendaftar.pendaftar",
+      "mappedBy": "key_factor_fnp"
+    }
+  }
+}

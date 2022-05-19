@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "data_pegawais",
+  "info": {
+    "singularName": "data-pegawai",
+    "pluralName": "data-pegawais",
+    "displayName": "Data_Pegawai",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nip": {
+      "type": "string",
+      "unique": true
+    },
+    "nama_pegawai": {
+      "type": "string",
+      "required": true
+    },
+    "tempat_lahir": {
+      "type": "string",
+      "required": true
+    },
+    "tanggal_lahir": {
+      "type": "date",
+      "required": true
+    },
+    "no_hp": {
+      "type": "string",
+      "required": true
+    },
+    "religion": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "jabatans": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::jabatan.jabatan",
+      "mappedBy": "data_pegawai"
+    },
+    "pendaftars": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::pendaftar.pendaftar",
+      "mappedBy": "data_pegawai"
+    },
+    "units": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::unit.unit",
+      "mappedBy": "data_pegawai"
+    },
+    "pengujis": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::penguji.penguji",
+      "mappedBy": "data_pegawai"
+    },
+    "pendidikans": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::pendidikan.pendidikan",
+      "mappedBy": "data_pegawai"
+    },
+    "gender": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

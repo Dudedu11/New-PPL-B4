@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "aspek_komponen_fnps",
+  "info": {
+    "singularName": "aspek-komponen-fnp",
+    "pluralName": "aspek-komponen-fnps",
+    "displayName": "aspek_komponen_fnp",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_aspek": {
+      "type": "integer",
+      "unique": true,
+      "required": true
+    },
+    "nama_aspek": {
+      "type": "string",
+      "required": true
+    },
+    "key_factor_fnp": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::key-factor-fnp.key-factor-fnp",
+      "inversedBy": "aspek_komponen_fnps"
+    },
+    "penilaians": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::penilaian.penilaian",
+      "mappedBy": "aspek_komponen_fnp"
+    }
+  }
+}
