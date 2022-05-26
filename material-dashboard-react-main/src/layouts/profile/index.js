@@ -9,17 +9,13 @@ import MDTypography from "components/MDTypography";
 // Material Dashboard 2 React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
 import DataTable from "examples/Tables/DataTable";
 
 // Data
 import authorsTableData from "layouts/profile/data/authorsTableData";
 
-
 function Tables() {
   const { columns, rows } = authorsTableData();
-
-
   return (
     <DashboardLayout>
       <DashboardNavbar />
@@ -38,7 +34,7 @@ function Tables() {
                 coloredShadow="info"
               >
                 <MDTypography variant="h6" color="white">
-                 Administrasi Users
+                  Administrasi Users
                 </MDTypography>
               </MDBox>
               <MDBox pt={3}>
@@ -52,10 +48,8 @@ function Tables() {
               </MDBox>
             </Card>
           </Grid>
-          
         </Grid>
       </MDBox>
-      
     </DashboardLayout>
   );
 }

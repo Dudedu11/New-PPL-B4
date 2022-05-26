@@ -10,15 +10,11 @@ import MDTypography from "components/MDTypography";
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import DataTable from "examples/Tables/DataTable";
-
 // Data
 import authorsTableData from "layouts/rtl/data/authorsTableData";
 
-
 function Tables() {
   const { columns, rows } = authorsTableData();
-
-
   return (
     <DashboardLayout>
       <DashboardNavbar />
@@ -37,7 +33,7 @@ function Tables() {
                 coloredShadow="info"
               >
                 <MDTypography variant="h6" color="white">
-                 Data Penguji
+                  Data Penguji
                 </MDTypography>
               </MDBox>
               <MDBox pt={3}>
@@ -51,10 +47,8 @@ function Tables() {
               </MDBox>
             </Card>
           </Grid>
-          
         </Grid>
       </MDBox>
-      
     </DashboardLayout>
   );
 }
