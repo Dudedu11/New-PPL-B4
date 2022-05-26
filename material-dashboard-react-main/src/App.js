@@ -50,7 +50,7 @@ import routes from "routes";
 import { useMaterialUIController, setMiniSidenav, setOpenConfigurator } from "context";
 
 // Images
-import brandWhite from "assets/images/logo-ct.png";
+import brandWhite from "assets/images/Logo_PLN.png";
 import brandDark from "assets/images/logo-ct-dark.png";
 
 export default function App() {
