@@ -32,6 +32,22 @@ export default function data() {
       </MDBox>
     </MDBox>
   );
+  
+
+  // const [penguji, setPenguji] = useState([]);
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const result = await axios.get(`${url}/api/pengujis?populate[pegawai][fields][0]=nama&populate[pegawai][fields][1]=nip&populate[pegawai][populate][0]=jabatan&populate[pegawai][populate][1]=grade&populate[pegawai][populate][2]=jenjang`);
+  //     console.log(result.data.data);
+  //     const arr = result.data.data;
+  //     setPenguji(arr);
+  //   };
+  //   fetchData();
+  // }, []);
+
+
+
 
   const Job = ({ title, description }) => (
     <MDBox lineHeight={1} textAlign="left">
@@ -41,6 +57,21 @@ export default function data() {
       <MDTypography variant="caption">{description}</MDTypography>
     </MDBox>
   );
+
+  const [penguji, setPenguji] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios.get(`${url}/api/pengujis?populate[pegawai][fields]
+      [0]=nama&populate[pegawai][fields][1]=nip&populate[pegawai][populate]
+      [0]=jabatan&populate[pegawai][populate][1]=grade&populate[pegawai][populate]
+      [2]=jenjang`);
+      console.log(result.data.data);
+      const arr = result.data.data;
+      setPenguji(arr);
+    };
+    fetchData();
+  }, []);
 
   return {
     columns: [
@@ -61,27 +92,27 @@ export default function data() {
         ),
 		nama: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            BENNY M M MARBUN
+            {item.attributes.pegawai.data.attributes.nama}
           </MDTypography>
         ),
         nip: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            6086003Z
+         {item.attributes.pegawai.data.attributes.nip}
           </MDTypography>
         ),
         jabatan: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            KEPALA DIVISI NIAGA
+          {item.attributes.pegawai.data.attributes.jabatan.data.attributes.nama_jabatan}
           </MDTypography>
         ),
         grade: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            INT02-17
+        {item.attributes.pegawai.data.attributes.grade.data.attributes.nama_grade}
           </MDTypography>
         ),
         jenjang: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Manajer Atas
+           {item.attributes.pegawai.data.attributes.jenjang.data.attributes.nama_jenjang}
           </MDTypography>
         ), 
       },
