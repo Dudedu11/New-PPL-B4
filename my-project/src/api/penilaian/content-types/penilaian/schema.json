@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "penilaians",
+  "info": {
+    "singularName": "penilaian",
+    "pluralName": "penilaians",
+    "displayName": "penilaian",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_penilaian": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "nama_penilaian": {
+      "type": "string",
+      "required": true
+    },
+    "nilai": {
+      "type": "integer",
+      "required": true
+    },
+    "aspek_komponen_fnp": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::aspek-komponen-fnp.aspek-komponen-fnp",
+      "inversedBy": "penilaians"
+    }
+  }
+}

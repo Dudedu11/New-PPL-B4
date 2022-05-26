@@ -4,15 +4,14 @@
   "info": {
     "singularName": "unit",
     "pluralName": "units",
-    "displayName": "unit",
-    "description": ""
+    "displayName": "unit"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "id_unit": {
+    "unit": {
       "type": "integer",
       "required": true,
       "unique": true
@@ -21,16 +20,16 @@
       "type": "string",
       "required": true
     },
+    "data_pegawai": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::data-pegawai.data-pegawai",
+      "inversedBy": "units"
+    },
     "direktorats": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::direktorat.direktorat",
-      "mappedBy": "units"
-    },
-    "employees": {
-      "type": "relation",
       "relation": "oneToMany",
-      "target": "api::employee.employee",
+      "target": "api::direktorat.direktorat",
       "mappedBy": "unit"
     }
   }

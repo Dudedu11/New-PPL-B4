@@ -4,8 +4,7 @@
   "info": {
     "singularName": "divisi",
     "pluralName": "divisis",
-    "displayName": "divisi",
-    "description": ""
+    "displayName": "divisi"
   },
   "options": {
     "draftAndPublish": true
@@ -13,31 +12,25 @@
   "pluginOptions": {},
   "attributes": {
     "id_divisi": {
+      "type": "integer",
       "required": true,
-      "unique": true,
-      "type": "integer"
+      "unique": true
     },
     "nama_divisi": {
       "type": "string",
       "required": true
-    },
-    "employees": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::employee.employee",
-      "mappedBy": "divisi"
-    },
-    "direktorats": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::direktorat.direktorat",
-      "inversedBy": "divisis"
     },
     "bidangs": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::bidang.bidang",
       "mappedBy": "divisi"
+    },
+    "direktorat": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::direktorat.direktorat",
+      "inversedBy": "divisis"
     }
   }
 }
