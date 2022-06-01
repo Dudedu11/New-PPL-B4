@@ -31,10 +31,10 @@ const Layout = () => {
               <CForm>
                 <CRow className="mb-3">
                   <CFormLabel htmlFor="inputNim" className="col-sm-2 col-form-label">
-                    NIM
+                    NIP
                   </CFormLabel>
                   <CCol sm={6}>
-                    <CFormInput id="inputNim" placeholder="NIM" />
+                    <CFormInput id="inputNim" placeholder="NIP" />
                   </CCol>
                   <CCol sm={2}>
                     <CButton type="submit" shape="rounded-pill">Cek</CButton>

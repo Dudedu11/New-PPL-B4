@@ -42,6 +42,8 @@ const Charts = React.lazy(() => import('./views/charts/Charts'))
 const CoreUIIcons = React.lazy(() => import('./views/icons/coreui-icons/CoreUIIcons'))
 const Flags = React.lazy(() => import('./views/icons/flags/Flags'))
 const Brands = React.lazy(() => import('./views/icons/brands/Brands'))
+const RekapFitproper = React.lazy(() => import('./views/icons/rekap-fitproper/RekapFitproper'))
+const RekapManual = React.lazy(() => import('./views/icons/rekap-manual/RekapManual'))
 
 // Notifications
 const Alerts = React.lazy(() => import('./views/notifications/alerts/Alerts'))
@@ -91,6 +93,8 @@ const routes = [
   { path: '/icons/coreui-icons', name: 'CoreUI Icons', element: CoreUIIcons },
   { path: '/icons/flags', name: 'Flags', element: Flags },
   { path: '/icons/brands', name: 'Brands', element: Brands },
+  { path: '/icons/rekap-fitproper', name: 'Rekap Nilai Fit & Proper', element: RekapFitproper },
+  { path: '/icons/rekap-manual', name: 'Rekap Manual Nilai Fit & Proper', element: RekapManual },
   { path: '/notifications', name: 'Notifications', element: Alerts, exact: true },
   { path: '/notifications/alerts', name: 'Alerts', element: Alerts },
   { path: '/notifications/badges', name: 'Badges', element: Badges },

@@ -208,7 +208,7 @@ const _nav = [
   },
   {
     component: CNavGroup,
-    name: 'Icons',
+    name: 'Report',
     icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
     items: [
       {
@@ -229,6 +229,16 @@ const _nav = [
         component: CNavItem,
         name: 'CoreUI Brands',
         to: '/icons/brands',
+      },
+      {
+        component: CNavItem,
+        name: 'Rekap Nilai Fit & Proper',
+        to: '/icons/rekap-fitproper',
+      },
+      {
+        component: CNavItem,
+        name: 'Rekap Manual Nilai Fit & Proper',
+        to: '/icons/rekap-manual',
       },
     ],
   },
