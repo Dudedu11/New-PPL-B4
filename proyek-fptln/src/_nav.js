@@ -155,7 +155,7 @@ const _nav = [
   },
   {
     component: CNavGroup,
-    name: 'Forms',
+    name: 'Fit & Proper',
     icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
     items: [
       {
@@ -190,7 +190,7 @@ const _nav = [
       },
       {
         component: CNavItem,
-        name: 'Layout',
+        name: 'Pendaftaran Fit & Proper',
         to: '/forms/layout',
       },
       {

@@ -85,7 +85,7 @@ const routes = [
   { path: '/forms/range', name: 'Range', element: Range },
   { path: '/forms/input-group', name: 'Input Group', element: InputGroup },
   { path: '/forms/floating-labels', name: 'Floating Labels', element: FloatingLabels },
-  { path: '/forms/layout', name: 'Layout', element: Layout },
+  { path: '/forms/layout', name: 'Pendaftaran Fit & Proper', element: Layout },
   { path: '/forms/validation', name: 'Validation', element: Validation },
   { path: '/icons', exact: true, name: 'Icons', element: CoreUIIcons },
   { path: '/icons/coreui-icons', name: 'CoreUI Icons', element: CoreUIIcons },
