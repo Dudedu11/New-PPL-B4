@@ -49,6 +49,18 @@ const _nav = [
     icon: <CIcon icon={cilUser} customClassName="nav-icon" />,
   },
   {
+    component: CNavItem,
+    name: 'Data Peserta',
+    to: '/base/tables/Peserta',
+    icon: <CIcon icon={cilUser} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Administrasi Users',
+    to: '/base/tables/Admin',
+    icon: <CIcon icon={cilUser} customClassName="nav-icon" />,
+  },
+  {
     component: CNavTitle,
     name: 'Components',
   },
