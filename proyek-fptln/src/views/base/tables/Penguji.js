@@ -18,15 +18,17 @@ import * as api from './Index';
 //import { DocsCallout, DocsExample } from 'src/components'
 
 const Penguji = () => {
+  var no= 0;
   const [todos, setTodos] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const result = await api.UrlPeserta();
+      const result = await api.UrlPenguji();
       const arr = result.data.data;
       setTodos(arr);
     };
     fetchData();
   }, []);
+  
   return (
     <CCol xs={12}>
     <CCard className="mb-4">
@@ -51,15 +53,14 @@ const Penguji = () => {
             {todos.map((todo) => (  
             <CTableBody>
               <CTableRow>
-                <CTableHeaderCell scope="row">1</CTableHeaderCell>
-                <CTableDataCell>{todo.id}</CTableDataCell>
-                {/* <CTableDataCell>{todo.attributes.pegawai.data.attributes.nama}</CTableDataCell>
-                <CTableDataCell>{todo.attributes.pegawai.data.attributes.nama}</CTableDataCell>
-                <CTableDataCell>{todo.attributes.pegawai.data.attributes.nama}</CTableDataCell>
-                <CTableDataCell>{todo.attributes.pegawai.data.attributes.nama}</CTableDataCell> */}
+              <CTableDataCell>{no = no + 1}</CTableDataCell>
+                <CTableDataCell>{todo.attributes.data_pegawai.data.attributes.nama_pegawai}</CTableDataCell>
+                <CTableDataCell>{todo.attributes.data_pegawai.data.attributes.nip}</CTableDataCell>
+                <CTableDataCell>{todo.attributes.data_pegawai.data.attributes.jabatan.data.attributes.nama_jabatan}</CTableDataCell>
+                <CTableDataCell>{todo.attributes.data_pegawai.data.attributes.jabatan.data.attributes.grade}</CTableDataCell>
+                <CTableDataCell>{todo.attributes.data_pegawai.data.attributes.jabatan.data.attributes.jenjang}</CTableDataCell> 
               </CTableRow>
             </CTableBody>
-
              ))}
           </CTable>
       </CCardBody>

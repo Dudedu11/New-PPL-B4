@@ -29,25 +29,13 @@ const Peserta = () => {
           <CTable striped>
             <CTableHead>
               <CTableRow>
-                <CTableHeaderCell scope="col">No</CTableHeaderCell>
-                <CTableHeaderCell scope="col">NIP</CTableHeaderCell>
+              <CTableHeaderCell scope="col">No</CTableHeaderCell>
                 <CTableHeaderCell scope="col">Nama</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Grade Pendidikan</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Jenjang</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Unit</CTableHeaderCell>
+                <CTableHeaderCell scope="col">NIP</CTableHeaderCell>
                 <CTableHeaderCell scope="col">Jabatan</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Direktorat</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Divisi</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Bidang</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Sub Bidang</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Religion</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Email</CTableHeaderCell>
                 <CTableHeaderCell scope="col">Grade</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Pendidikan</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Tempat Lahir</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Tanggal Lahir</CTableHeaderCell>
-                <CTableHeaderCell scope="col">No HP</CTableHeaderCell>
-                <CTableHeaderCell scope="col">Gender</CTableHeaderCell>
+                <CTableHeaderCell scope="col">Jenjang</CTableHeaderCell>
+                <CTableHeaderCell scope="col">Edit</CTableHeaderCell>
 
               </CTableRow>
             </CTableHead>
