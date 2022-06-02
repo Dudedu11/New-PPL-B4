@@ -1,10 +1,13 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 import {
   CCard,
   CCardBody,
   CCardHeader,
   CCol,
-  //CRow,
+  CRow,
+  CButton,
+  CForm,
   CTable,
   CTableBody,
   //CTableCaption,
@@ -18,6 +21,13 @@ import {
 const Peserta = () => {
   return (
     <CCol xs={12}>
+      <CForm>
+            <CRow className="mb-3">
+                  <CCol sm={4}>
+                  <Link to={'/base/tables/TambahPeserta'}><CButton type="submit" shape="rounded-pill">TAMBAH DATA PESERTA</CButton></Link>
+                  </CCol>
+            </CRow>
+          </CForm>
     <CCard className="mb-4">
       <CCardHeader>
         <strong>Data Peserta</strong>

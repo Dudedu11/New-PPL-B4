@@ -20,6 +20,8 @@ const Spinners = React.lazy(() => import('./views/base/spinners/Spinners'))
 const Tables = React.lazy(() => import('./views/base/tables/Tables'))
 const Penguji = React.lazy(() => import('./views/base/tables/Penguji'))
 const Peserta = React.lazy(() => import('./views/base/tables/Peserta'))
+const TambahPeserta = React.lazy(() => import('./views/base/tables/TambahPeserta'))
+const TambahPenguji = React.lazy(() => import('./views/base/tables/TambahPenguji'))
 const Admin = React.lazy(() => import('./views/base/tables/Admin'))
 const Tooltips = React.lazy(() => import('./views/base/tooltips/Tooltips'))
 
@@ -38,8 +40,6 @@ const Range = React.lazy(() => import('./views/forms/range/Range'))
 const Select = React.lazy(() => import('./views/forms/select/Select'))
 const Validation = React.lazy(() => import('./views/forms/validation/Validation'))
 
-const Charts = React.lazy(() => import('./views/charts/Charts'))
-
 // Icons
 const CoreUIIcons = React.lazy(() => import('./views/icons/coreui-icons/CoreUIIcons'))
 const Flags = React.lazy(() => import('./views/icons/flags/Flags'))
@@ -48,12 +48,7 @@ const RekapFitproper = React.lazy(() => import('./views/icons/rekap-fitproper/Re
 const RekapManual = React.lazy(() => import('./views/icons/rekap-manual/RekapManual'))
 const CetakProper = React.lazy(() => import('./views/icons/cetak-fitproper/CetakProper'))
 
-// Notifications
-const Alerts = React.lazy(() => import('./views/notifications/alerts/Alerts'))
-const Badges = React.lazy(() => import('./views/notifications/badges/Badges'))
-const Modals = React.lazy(() => import('./views/notifications/modals/Modals'))
-const Toasts = React.lazy(() => import('./views/notifications/toasts/Toasts'))
-
+// Pencarian Fit Proper
 const PencarianFitproper = React.lazy(() => import('./views/pencarian-fitproper/PencarianFitproper'))
 
 const routes = [
@@ -78,13 +73,14 @@ const routes = [
   { path: '/base/tables', name: 'Tables', element: Tables },
   { path: '/base/tables/Penguji', name: 'Penguji', element: Penguji },
   { path: '/base/tables/Peserta', name: 'Peserta', element: Peserta },
+  { path: '/base/tables/TambahPeserta', name: 'Tambah / Update Data Peserta', element: TambahPeserta },
+  { path: '/base/tables/TambahPenguji', name: 'Tambah / Update Data Penguji', element: TambahPenguji },
   { path: '/base/tables/Admin', name: 'Admin', element: Admin },
   { path: '/base/tooltips', name: 'Tooltips', element: Tooltips },
   { path: '/buttons', name: 'Buttons', element: Buttons, exact: true },
   { path: '/buttons/buttons', name: 'Buttons', element: Buttons },
   { path: '/buttons/dropdowns', name: 'Dropdowns', element: Dropdowns },
   { path: '/buttons/button-groups', name: 'Button Groups', element: ButtonGroups },
-  { path: '/charts', name: 'Charts', element: Charts },
   { path: '/forms', name: 'Forms', element: FormControl, exact: true },
   { path: '/forms/form-control', name: 'Form Control', element: FormControl },
   { path: '/forms/select', name: 'Select', element: Select },
@@ -101,11 +97,6 @@ const routes = [
   { path: '/icons/rekap-fitproper', name: 'Rekap Nilai Fit & Proper', element: RekapFitproper },
   { path: '/icons/rekap-manual', name: 'Rekap Manual Nilai Fit & Proper', element: RekapManual },
   { path: '/icons/cetak-fitproper', name: 'Cetak Nilai Fit & Proper', element: CetakProper},
-  { path: '/notifications', name: 'Notifications', element: Alerts, exact: true },
-  { path: '/notifications/alerts', name: 'Alerts', element: Alerts },
-  { path: '/notifications/badges', name: 'Badges', element: Badges },
-  { path: '/notifications/modals', name: 'Modals', element: Modals },
-  { path: '/notifications/toasts', name: 'Toasts', element: Toasts },
   { path: '/pencarian-fitproper', name: 'Pencarian Fit Proper', element: PencarianFitproper },
 ]
 
