@@ -9,6 +9,7 @@ import {
   cilNotes,
   cilPencil,
   cilPuzzle,
+  cilSearch,
   cilSpeedometer,
   cilStar,
   cilUser,
@@ -252,6 +253,11 @@ const _nav = [
         name: 'Rekap Manual Nilai Fit & Proper',
         to: '/icons/rekap-manual',
       },
+      {
+        component: CNavItem,
+        name: 'Cetak Nilai Fit & Proper',
+        to: '/icons/cetak-fitproper',
+      },
     ],
   },
   {
@@ -283,13 +289,9 @@ const _nav = [
   },
   {
     component: CNavItem,
-    name: 'Widgets',
-    to: '/widgets',
-    icon: <CIcon icon={cilCalculator} customClassName="nav-icon" />,
-    badge: {
-      color: 'info',
-      text: 'NEW',
-    },
+    name: 'Pencarian Fit Proper',
+    to: '/pencarian-fitproper',
+    icon: <CIcon icon={cilSearch} customClassName="nav-icon" />,
   },
   {
     component: CNavTitle,

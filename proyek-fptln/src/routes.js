@@ -46,6 +46,7 @@ const Flags = React.lazy(() => import('./views/icons/flags/Flags'))
 const Brands = React.lazy(() => import('./views/icons/brands/Brands'))
 const RekapFitproper = React.lazy(() => import('./views/icons/rekap-fitproper/RekapFitproper'))
 const RekapManual = React.lazy(() => import('./views/icons/rekap-manual/RekapManual'))
+const CetakProper = React.lazy(() => import('./views/icons/cetak-fitproper/CetakProper'))
 
 // Notifications
 const Alerts = React.lazy(() => import('./views/notifications/alerts/Alerts'))
@@ -53,7 +54,7 @@ const Badges = React.lazy(() => import('./views/notifications/badges/Badges'))
 const Modals = React.lazy(() => import('./views/notifications/modals/Modals'))
 const Toasts = React.lazy(() => import('./views/notifications/toasts/Toasts'))
 
-const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
+const PencarianFitproper = React.lazy(() => import('./views/pencarian-fitproper/PencarianFitproper'))
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
@@ -99,12 +100,13 @@ const routes = [
   { path: '/icons/brands', name: 'Brands', element: Brands },
   { path: '/icons/rekap-fitproper', name: 'Rekap Nilai Fit & Proper', element: RekapFitproper },
   { path: '/icons/rekap-manual', name: 'Rekap Manual Nilai Fit & Proper', element: RekapManual },
+  { path: '/icons/cetak-fitproper', name: 'Cetak Nilai Fit & Proper', element: CetakProper},
   { path: '/notifications', name: 'Notifications', element: Alerts, exact: true },
   { path: '/notifications/alerts', name: 'Alerts', element: Alerts },
   { path: '/notifications/badges', name: 'Badges', element: Badges },
   { path: '/notifications/modals', name: 'Modals', element: Modals },
   { path: '/notifications/toasts', name: 'Toasts', element: Toasts },
-  { path: '/widgets', name: 'Widgets', element: Widgets },
+  { path: '/pencarian-fitproper', name: 'Pencarian Fit Proper', element: PencarianFitproper },
 ]
 
 export default routes
