@@ -1,10 +1,13 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 import {
   CCard,
   CCardBody,
   CCardHeader,
   CCol,
-  //CRow,
+  CRow,
+  CButton,
+  CForm,
   CTable,
   CTableBody,
   //CTableCaption,
@@ -17,7 +20,7 @@ import { useEffect, useState } from 'react';
 import * as api from './Index';
 //import { DocsCallout, DocsExample } from 'src/components'
 
-const Penguji = () => {
+const Peserta = () => {
   var no= 0;
   const [todos, setTodos] = useState([]);
   useEffect(() => {
@@ -28,33 +31,34 @@ const Penguji = () => {
     };
     fetchData();
   }, []);
-  
   return (
     <CCol xs={12}>
-          {/* <CForm>
+      <CForm>
             <CRow className="mb-3">
                   <CCol sm={4}>
-                  <Link to={'/base/tables/TambahPenguji'}><CButton type="submit" shape="rounded-pill">TAMBAH DATA PENGUJI</CButton></Link>
+                  <Link to={'/base/tables/TambahPeserta'}><CButton type="submit" shape="rounded-pill">TAMBAH DATA PENGUJI</CButton></Link>
                   </CCol>
             </CRow>
-          </CForm> */}
+          </CForm>
     <CCard className="mb-4">
       <CCardHeader>
         <strong>Data Penguji</strong>
       </CCardHeader>
       <CCardBody>
         <p className="text-medium-emphasis small">
-          Berikut adalah data Penguji yang terdaftar pada perusahaan
+          Berikut adalah data penguji yang terdaftar pada perusahaan
         </p>
           <CTable striped>
             <CTableHead>
               <CTableRow>
-                <CTableHeaderCell scope="col">No</CTableHeaderCell>
+              <CTableHeaderCell scope="col">No</CTableHeaderCell>
                 <CTableHeaderCell scope="col">Nama</CTableHeaderCell>
                 <CTableHeaderCell scope="col">NIP</CTableHeaderCell>
                 <CTableHeaderCell scope="col">Jabatan</CTableHeaderCell>
                 <CTableHeaderCell scope="col">Grade</CTableHeaderCell>
                 <CTableHeaderCell scope="col">Jenjang</CTableHeaderCell>
+                <CTableHeaderCell scope="col">Edit</CTableHeaderCell>
+
               </CTableRow>
             </CTableHead>
             {todos.map((todo) => (  
@@ -76,4 +80,4 @@ const Penguji = () => {
   )
 }
 
-export default Penguji
+export default Peserta
