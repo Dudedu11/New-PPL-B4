@@ -19,7 +19,8 @@
     },
     "nama_direktorat": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "divisis": {
       "type": "relation",

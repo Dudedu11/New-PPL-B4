@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * grade service.
+ * penguji3 service.
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::grade.grade');
+module.exports = createCoreService('api::penguji3.penguji3');

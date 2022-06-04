@@ -19,7 +19,8 @@
     },
     "nama_sub": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "bidang": {
       "type": "relation",

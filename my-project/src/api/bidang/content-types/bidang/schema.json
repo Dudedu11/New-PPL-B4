@@ -4,7 +4,8 @@
   "info": {
     "singularName": "bidang",
     "pluralName": "bidangs",
-    "displayName": "bidang"
+    "displayName": "bidang",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,7 +19,8 @@
     },
     "nama_bidang": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "divisi": {
       "type": "relation",

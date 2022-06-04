@@ -4,7 +4,8 @@
   "info": {
     "singularName": "divisi",
     "pluralName": "divisis",
-    "displayName": "divisi"
+    "displayName": "divisi",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,7 +19,8 @@
     },
     "nama_divisi": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "bidangs": {
       "type": "relation",

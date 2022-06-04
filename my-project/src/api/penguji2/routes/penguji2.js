@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * grade router.
+ * penguji2 router.
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::grade.grade');
+module.exports = createCoreRouter('api::penguji2.penguji2');

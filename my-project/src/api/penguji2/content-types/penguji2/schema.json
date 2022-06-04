@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "penguji2s",
+  "info": {
+    "singularName": "penguji2",
+    "pluralName": "penguji2s",
+    "displayName": "penguji2"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "data_pegawai": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::data-pegawai.data-pegawai",
+      "inversedBy": "penguji_2s"
+    },
+    "pendaftar": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pendaftar.pendaftar",
+      "inversedBy": "penguji_2s"
+    }
+  }
+}

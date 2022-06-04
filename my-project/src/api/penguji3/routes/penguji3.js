@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * jenjang router.
+ * penguji3 router.
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::jenjang.jenjang');
+module.exports = createCoreRouter('api::penguji3.penguji3');

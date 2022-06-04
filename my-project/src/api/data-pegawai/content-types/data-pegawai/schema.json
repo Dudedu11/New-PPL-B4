@@ -40,11 +40,11 @@
       "type": "string",
       "required": true
     },
-    "jabatans": {
+    "jabatan": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToOne",
       "target": "api::jabatan.jabatan",
-      "mappedBy": "data_pegawai"
+      "inversedBy": "data_pegawais"
     },
     "pendaftars": {
       "type": "relation",
@@ -58,12 +58,6 @@
       "target": "api::unit.unit",
       "mappedBy": "data_pegawai"
     },
-    "pengujis": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::penguji.penguji",
-      "mappedBy": "data_pegawai"
-    },
     "pendidikans": {
       "type": "relation",
       "relation": "oneToMany",
@@ -73,6 +67,24 @@
     "gender": {
       "type": "string",
       "required": true
+    },
+    "penguji_2s": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::penguji2.penguji2",
+      "mappedBy": "data_pegawai"
+    },
+    "penguji_3s": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::penguji3.penguji3",
+      "mappedBy": "data_pegawai"
+    },
+    "penguji_1s": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::penguji.penguji",
+      "mappedBy": "data_pegawai"
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "unit",
     "pluralName": "units",
-    "displayName": "unit"
+    "displayName": "unit",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,7 +19,8 @@
     },
     "nama_unit": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "data_pegawai": {
       "type": "relation",

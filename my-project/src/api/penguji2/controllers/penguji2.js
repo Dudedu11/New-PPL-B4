@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- *  grade controller
+ *  penguji2 controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::grade.grade');
+module.exports = createCoreController('api::penguji2.penguji2');

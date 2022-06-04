@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * jenjang service.
+ * penguji2 service.
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::jenjang.jenjang');
+module.exports = createCoreService('api::penguji2.penguji2');

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "jabatan",
     "pluralName": "jabatans",
-    "displayName": "jabatan"
+    "displayName": "proyeksi jabatan",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,17 +21,23 @@
       "type": "string",
       "required": true
     },
-    "data_pegawai": {
+    "data_pegawais": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "oneToMany",
       "target": "api::data-pegawai.data-pegawai",
-      "inversedBy": "jabatans"
+      "mappedBy": "jabatan"
+    },
+    "grade": {
+      "type": "string"
     },
     "jenjang": {
+      "type": "string"
+    },
+    "pendaftars": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::jenjang.jenjang",
-      "inversedBy": "jabatans"
+      "relation": "oneToMany",
+      "target": "api::pendaftar.pendaftar",
+      "mappedBy": "proyeksi_jabatan"
     }
   }
 }
