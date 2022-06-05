@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "awdawdwas",
+  "info": {
+    "singularName": "awdawdwa",
+    "pluralName": "awdawdwas",
+    "displayName": "awdawdwa"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "awdaw": {
+      "type": "string"
+    }
+  }
+}
