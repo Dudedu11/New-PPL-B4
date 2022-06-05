@@ -76,25 +76,6 @@ const _nav = [
     items: [
       {
         component: CNavItem,
-        name: 'CoreUI Free',
-        to: '/icons/coreui-icons',
-        badge: {
-          color: 'success',
-          text: 'NEW',
-        },
-      },
-      {
-        component: CNavItem,
-        name: 'CoreUI Flags',
-        to: '/icons/flags',
-      },
-      {
-        component: CNavItem,
-        name: 'CoreUI Brands',
-        to: '/icons/brands',
-      },
-      {
-        component: CNavItem,
         name: 'Rekap Nilai Fit & Proper',
         to: '/icons/rekap-fitproper',
       },

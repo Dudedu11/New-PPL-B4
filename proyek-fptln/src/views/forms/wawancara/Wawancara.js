@@ -15,17 +15,26 @@ import {
 } from '@coreui/react'
 import { DocsExample } from 'src/components'
 
-const Layout = () => {
+const Wawancara = () => {
+  // const [todos, setTodos] = useState([]);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const result = await api.proyeksi();
+  //     const arr = result.data.data;
+  //     setTodos(arr);
+  //   };
+  //   fetchData();
+  // }, []);
   return (
     <CRow>
       <CCol xs={12}>
         <CCard className="mb-4">
           <CCardHeader>
-            <strong>Pendaftaran / Updating Wawancara</strong>
+            <strong>Pendaftaran / Updating Peserta Fit & Proper</strong>
           </CCardHeader>
           <CCardBody>
             <p className="text-medium-emphasis small">
-              Input / Updating Pendaftaran Wawancara
+              Input / Updating Pendaftaran Peserta Fit Proper
             </p>
             <DocsExample href="forms/layout#horizontal-form">
               <CForm>
@@ -45,7 +54,7 @@ const Layout = () => {
                     Nama
                   </CFormLabel>
                   <CCol sm={10}>
-                    <CFormInput id="inputNama" placeholder="Nama" disabled />
+                    <CFormInput id="inputNama" placeholder="Nama" />
                   </CCol>
                 </CRow>
                 <CRow className="mb-3">
@@ -53,7 +62,7 @@ const Layout = () => {
                     Jabatan
                   </CFormLabel>
                   <CCol sm={10}>
-                    <CFormInput id="inputJabatan" placeholder="Jabatan" disabled />
+                    <CFormInput id="inputJabatan" placeholder="Jabatan" />
                   </CCol>
                 </CRow>
                 <CRow className="mb-3">
@@ -61,7 +70,7 @@ const Layout = () => {
                     Grade
                   </CFormLabel>
                   <CCol sm={6}>
-                    <CFormInput id="inputGrade" placeholder="Grade" disabled />
+                    <CFormInput id="inputGrade" placeholder="Grade" />
                   </CCol>
                 </CRow>
                 <CRow className="mb-3">
@@ -171,4 +180,4 @@ const Layout = () => {
   )
 }
 
-export default Layout
+export default Wawancara

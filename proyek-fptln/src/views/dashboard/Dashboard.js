@@ -18,8 +18,20 @@ import {
   CTableRow,
 } from '@coreui/react'
 import { DocsCallout, DocsExample } from 'src/components'
+import { useEffect, useState } from 'react';
+import * as api from './Index';
 
 const Dashboard = () => {
+  var no= 0;
+  const [todos, setTodos] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await api.UrlPeserta();
+      const arr = result.data.data;
+      setTodos(arr);
+    };
+    fetchData();
+  }, []);
   return (
     <CRow>
       <CCol xs={12}>
@@ -52,11 +64,21 @@ const Dashboard = () => {
                     <CTableHeaderCell scope="col">Nama</CTableHeaderCell>
                     <CTableHeaderCell scope="col">NIP</CTableHeaderCell>
                     <CTableHeaderCell scope="col">Jabatan</CTableHeaderCell>
-                    <CTableHeaderCell scope="col">Proyeksi</CTableHeaderCell>
-                    <CTableHeaderCell scope="col">Tgl</CTableHeaderCell>
-                    <CTableHeaderCell scope="col">Penguji</CTableHeaderCell>
+                    <CTableHeaderCell scope="col">Tanggal</CTableHeaderCell>
                   </CTableRow>
                 </CTableHead>
+                {todos.map((todo) => (  
+            <CTableBody>
+              <CTableRow>
+              <CTableDataCell>{no = no + 1}</CTableDataCell>
+                <CTableDataCell>{todo.attributes.data_pegawai.data.attributes.nama_pegawai}</CTableDataCell>
+                <CTableDataCell>{todo.attributes.data_pegawai.data.attributes.nip}</CTableDataCell>
+                <CTableDataCell>{todo.attributes.data_pegawai.data.attributes.jabatan.data.attributes.nama_jabatan}</CTableDataCell>
+                <CTableDataCell>{todo.attributes.tanggal_daftar}</CTableDataCell> 
+
+              </CTableRow>
+            </CTableBody>
+             ))}
               </CTable>
             </DocsExample>
           </CCardBody>

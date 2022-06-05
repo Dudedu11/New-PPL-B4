@@ -36,7 +36,7 @@ const Peserta = () => {
       <CForm>
             <CRow className="mb-3">
                   <CCol sm={4}>
-                  <Link to={'/base/tables/TambahPeserta'}><CButton type="submit" shape="rounded-pill">TAMBAH DATA PENGUJI</CButton></Link>
+                  <Link to={'/base/tables/TambahPenguji '}><CButton type="submit" shape="rounded-pill">TAMBAH DATA PENGUJI</CButton></Link>
                   </CCol>
             </CRow>
           </CForm>

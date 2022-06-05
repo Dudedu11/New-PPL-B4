@@ -14,8 +14,77 @@ import {
   CRow,
 } from '@coreui/react'
 import { DocsExample } from 'src/components'
+import axios from "axios";
 
 const Layout = () => {
+  state = {
+    tanggal_daftar : '',
+    jenis_fnp : '',
+    file_ppt : '',
+    file_cv : '',
+    id_pendaftaran : '',
+    uraian_jabaran : '',
+    data_pegawai : ''
+  };
+
+  onTanggalChange = e => {
+    this.setState({
+      tanggal_daftar: e.target.value
+    });
+  };
+
+  onJenisChange = e => {
+    this.setState({
+      jenis_fnp: e.target.value
+    });
+  };
+
+  onPptChange = e => {
+    this.setState({
+      file_ppt: e.target.value
+    });
+  };
+
+  onCvChange = e => {
+    this.setState({
+      file_cv: e.target.value
+    });
+  };
+
+  onIdChange = e => {
+    this.setState({
+      id_pendaftaran: e.target.value
+    });
+  };
+
+  onUrjabChange = e => {
+    this.setState({
+      uraian_jabaran: e.target.value
+    });
+  };
+
+  onDatapChange = e => {
+    this.setState({
+      data_pegawai: e.target.value
+    });
+  };
+  handleSubmit = e => {
+    e.preventDefault();
+    const data = {
+      tanggal_daftar: this.state.tanggal_daftar,
+      jenis_fnp: this.state.jenis_fnp,
+      file_ppt: this.state.file_ppt,
+      file_cv: this.state.file_cv,
+      id_pendaftaran: this.state.id_pendaftaran,
+      uraian_jabaran: this.state.uraian_jabaran,
+      data_pegawai: this.state.data_pegawai
+    };
+    axios
+      .post("http://localhost:1337/api/pendaftars", data)
+      .then(res => console.log(res))
+      .catch(err => console.log(err));
+  };
+
   return (
     <CRow>
       <CCol xs={12}>
@@ -28,13 +97,14 @@ const Layout = () => {
               Input / Updating Pendaftaran Peserta Fit Proper
             </p>
             <DocsExample href="forms/layout#horizontal-form">
+            <form className="post" onSubmit={this.handleSubmit}>
               <CForm>
                 <CRow className="mb-3">
                   <CFormLabel htmlFor="inputNim" className="col-sm-2 col-form-label">
                     NIP
                   </CFormLabel>
                   <CCol sm={6}>
-                    <CFormInput id="inputNim" placeholder="NIP" />
+                    <CFormInput id="inputNim" placeholder="NIP" value={this.state.data_pegawai} onChange={this.onDatapChange} required/>
                   </CCol>
                   <CCol sm={2}>
                     <CButton type="submit" shape="rounded-pill">Cek</CButton>
@@ -69,11 +139,11 @@ const Layout = () => {
                     Date
                   </CFormLabel>
                   <CCol sm={6}>
-                    <CFormInput id="inputDate" type="date" />
+                    <CFormInput id="inputDate" type="date" value={this.state.tanggal_daftar} onChange={this.onTanggalChange} required/>
                   </CCol>
                 </CRow>
                 <CRow className="mb-3">
-                  <CFormLabel htmlFor="inputProyeksi" className="col-sm-2 col-form-label">
+                  <CFormLabel htmlFor="inputProyeksi" className="col-sm-2 col-form-label" >
                     Proyeksi
                   </CFormLabel>
                   <CCol sm={10}>
@@ -119,7 +189,7 @@ const Layout = () => {
                     Upload PPT *.ppt/.pptx
                   </CFormLabel>
                   <CCol sm={10}>
-                    <CFormInput type="file" id="inputPPT" />
+                    <CFormInput type="file" id="inputPPT" value={this.state.file_ppt} onChange={this.onPptChange} required/>
                   </CCol>
                 </CRow>
                 <CRow className="mb-3">
@@ -127,7 +197,7 @@ const Layout = () => {
                     Upload CV *.doc/.docx
                   </CFormLabel>
                   <CCol sm={10}>
-                    <CFormInput type="file" id="inputCV" />
+                    <CFormInput type="file" id="inputCV" value={this.state.file_cv} onChange={this.onChange} required/>
                   </CCol>
                 </CRow>
                 <CRow className="mb-3">
@@ -163,6 +233,7 @@ const Layout = () => {
                   </CCol>
                 </CRow>
               </CForm>
+              </form>
             </DocsExample>
           </CCardBody>
         </CCard>
